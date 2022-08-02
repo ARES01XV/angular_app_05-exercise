@@ -1,0 +1,54 @@
+<div class="container">
+  <a routerLink="/students">
+    <i class="fa-solid fa-circle-arrow-left"></i>
+    Back</a
+  >
+
+  <form action="">
+    <h2>Create new student</h2>
+    <div hidden>
+      <label for="_id">ID</label><br />
+      <input type="number" id="_id" name="_id" />
+    </div>
+    <div>
+      <label for="name">Name</label><br />
+      <input type="text" id="name" name="name" #student_name />
+    </div>
+    <div>
+      <label for="email">Email</label><br />
+      <input type="email" id="email" name="email" #student_email />
+    </div>
+    <div>
+      <label for="cohort">Cohort</label><br />
+      <input type="text" id="cohort" name="cohort" #student_cohort />
+    </div>
+    <div>
+      <label for="phone_number">Phone</label><br />
+      <input
+        type="number"
+        id="phone_number"
+        name="phone_number"
+        #student_phone_number
+      />
+    </div>
+    <div>
+      <button
+        (click)="
+          new_student(
+            student_name.value,
+            student_email.value,
+            student_cohort.value,
+            student_phone_number.value
+          );
+          student_name.value = '';
+          student_email.value = '';
+          student_cohort.value = '';
+          student_phone_number.value = ''
+        "
+        routerLink="/students"
+      >
+        Add
+      </button>
+    </div>
+  </form>
+</div>

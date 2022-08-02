@@ -1,0 +1,36 @@
+.card {
+  /* border: 1px solid red; */
+  border-radius: 1vw;
+  width: 50vw;
+  /* height: 40vh; */
+  margin: auto;
+  margin-top: 10vw;
+  padding: 2vw;
+  /* color: rgb(226, 226, 226); */
+  color: #4c594d;
+  text-align: center;
+  /* background: #434a59; */
+  background: #ebebeb;
+}
+
+.card h1 {
+  /* border: 1px solid red; */
+  margin-bottom: 5vw;
+  line-height: 4vw;
+  letter-spacing: 0.5vw;
+  font-size: 2.5vw;
+}
+
+.card a {
+  /* border: 1px solid red; */
+  text-decoration: none;
+  color: #ebebeb;
+  padding: 1vw 2vw;
+  background: #787aed;
+  font-size: 1.3vw;
+  font-weight: bold;
+  transition: .5s;
+}
+.card a:hover {
+  background: #4c4d98;
+}
