@@ -33,30 +33,22 @@ export class StudentsComponent implements OnInit {
   }
 
   //Remove A Student (supposed to refresh page but is defective)--------
-  remove_student(datas: any) {
-    this.student_service.delete_student(datas._id).subscribe((data) => {
-      console.log(data);
-      this.students = this.students?.filter((u: any) => {
-        u !== datas
-      });
-    });
-  }
-  
-  //Remove A Student (Kira version; gives an error)--------
-  // remove_student(data: any) {
-  //   this.student_service.delete_student(data._id).subscribe((data) => {
+  // remove_student(datas: any) {
+  //   this.student_service.delete_student(datas._id).subscribe((data) => {
   //     console.log(data);
-  //     this.students = this.students?.filter((val) => data._id !== val._id)
-  //     })
-  //   };
-  // }
-  
-  //Remove A Student (works but have to manually refresh page to see change)--
-  // remove_student(data: any) {
-  //   this.student_service.delete_student(data._id).subscribe((data) => {
-  //     console.log(data);
+  //     this.students = this.students?.filter((u: any) => {
+  //       u !== datas
+  //     });
   //   });
   // }
+
+  // Remove A Student-----------------------------------------------------
+  remove_student(data: any) {
+    this.student_service.delete_student(data._id).subscribe((data) => {
+      console.log(data);
+      return this.retrieve_students();
+    });
+  }
 
   // ======================================================================================================
 

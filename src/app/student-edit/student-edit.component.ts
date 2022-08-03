@@ -28,24 +28,29 @@ export class StudentEditComponent implements OnInit {
     this.student_service.get_student_by_id(id).subscribe((data: any) => {
       this.details = data;
       this.student = {
-        id: this.details. id,
+        id: this.details._id,
         name: this.details.name,
         email:this.details.email,
         cohort: this.details.cohort,
         phone_number: this.details.phone_number
       }
+      console.error();
+      console.log(this.details)
     });
   }
 
-  update_student(id:any){
+  update_student(_id:any){
     const data = {
+      _id: this.details._id,
       name: this.student.name,
       email: this.student.email,
       cohort: this.student.cohort,
       phone_number: this.student.phone_number
     };
-    this.student_service.update(id, data).subscribe(() => {
+    this.student_service.update(_id, data).subscribe(() => {
       this.route.navigate(['/students']);
+      console.error();
+      console.log(data);
     })
   }
 

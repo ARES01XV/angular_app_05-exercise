@@ -10,11 +10,17 @@ import { StudentService } from './student.service';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentAddComponent } from './student-add/student-add.component';
 import { StudentEditComponent } from './student-edit/student-edit.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, StudentsComponent, HomeComponent, StudentAddComponent, StudentEditComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    StudentsComponent,
+    HomeComponent,
+    StudentAddComponent,
+    StudentEditComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, RouterModule, HttpClientModule, FormsModule],
   providers: [StudentService],
   bootstrap: [AppComponent],
 })

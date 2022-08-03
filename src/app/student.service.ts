@@ -44,7 +44,7 @@ export class StudentService {
 
   //Update Student --------------------------------------
   update(id:any, data:any): Observable<any> {
-    return this.http.patch(`${API}/update_student/` + id, data)
+    return this.http.patch(`${API}/update/` + id, data)
   }
   
   // ==========================================================================================================
