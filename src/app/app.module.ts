@@ -20,7 +20,13 @@ import { FormsModule } from '@angular/forms';
     StudentAddComponent,
     StudentEditComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule,
+    HttpClientModule,
+    FormsModule,
+  ],
   providers: [StudentService],
   bootstrap: [AppComponent],
 })

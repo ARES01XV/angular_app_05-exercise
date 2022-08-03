@@ -29,7 +29,7 @@
   background: #787aed;
   font-size: 1.3vw;
   font-weight: bold;
-  transition: .5s;
+  transition: 0.5s;
 }
 .card a:hover {
   background: #4c4d98;

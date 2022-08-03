@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Student } from '../models/student.model';
 import { StudentService } from '../student.service';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-students',
@@ -10,9 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./students.component.css'],
 })
 export class StudentsComponent implements OnInit {
-  students?: Student[]; //array from the model imported above
-  // private API = 'http://localhost:3000/api/';
-  // private http!:HttpClient;
+  students?: Student[];
 
   constructor(
     private student_service: StudentService,
@@ -32,16 +29,6 @@ export class StudentsComponent implements OnInit {
     });
   }
 
-  //Remove A Student (supposed to refresh page but is defective)--------
-  // remove_student(datas: any) {
-  //   this.student_service.delete_student(datas._id).subscribe((data) => {
-  //     console.log(data);
-  //     this.students = this.students?.filter((u: any) => {
-  //       u !== datas
-  //     });
-  //   });
-  // }
-
   // Remove A Student-----------------------------------------------------
   remove_student(data: any) {
     this.student_service.delete_student(data._id).subscribe((data) => {
@@ -51,31 +38,4 @@ export class StudentsComponent implements OnInit {
   }
 
   // ======================================================================================================
-
-  //Edit Student-----------------------------------------------------
-  // edit_student(_id: string): void {
-  //   this.routes.navigate([`student_edit/${_id}`]);
-  //   console.log(_id);
-  // }
-
-  //Delete student-----------------------------------------------------
-  // remove_student(_id: string): void {
-  //   this.student_service.delete_student(_id).subscribe({
-  //     next: () => {
-  //       console.log('Student has been deleted');
-  //     },
-  //     error: () => {
-  //       console.log('Error');
-  //     },
-  //     complete: () => {
-  //       this.retrieve_students();
-  //     },
-  //   });
-  // }
-
-  // remove_student(data: any) {
-  //   this.student_service.delete_student(data._id).subscribe((data) => {
-  //     console.log(data);
-  //   });
-  // }
-};
+}

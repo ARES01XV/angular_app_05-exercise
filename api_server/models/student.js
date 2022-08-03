@@ -11,18 +11,18 @@ let Student = new schema({
     email: {
         type: String,
         required: true
-    }, 
+    },
     cohort: {
         type: String,
         required: true
-    }, 
+    },
     phone_number: {
-        type:  Number,
+        type: Number,
         required: true
     }
-}, 
-{
-    collection: 'students'
-});
+},
+    {
+        collection: 'students'
+    });
 
 module.exports = mongoose.model('Student', Student);

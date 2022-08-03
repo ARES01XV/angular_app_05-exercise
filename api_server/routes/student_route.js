@@ -44,7 +44,7 @@ student_route.route('/remove_student/:id').delete((req, res) => {
 //Edit a Student-------------------------------------------------------
 student_route.route('/student/:id').get((req, res) => {
     Student.findById(req.params.id, (error, data) => {
-        if(error) {
+        if (error) {
             return next(error)
         } else {
             res.json(data)
@@ -54,7 +54,7 @@ student_route.route('/student/:id').get((req, res) => {
 
 //Update a Student-------------------------------------------------------
 student_route.route('/update/:id').patch((req, res) => {
-    Student.findByIdAndUpdate(req.params.id, 
+    Student.findByIdAndUpdate(req.params.id,
         {
             name: req.body.name,
             email: req.body.email,
@@ -62,40 +62,15 @@ student_route.route('/update/:id').patch((req, res) => {
             phone_number: req.body.phone_number
         },
         (error, data) => {
-        if (error) {
-            return next(error)
-        } else {
-            res.json(data)
-        }
-    })
+            if (error) {
+                return next(error)
+            } else {
+                res.json(data)
+            }
+        })
 })
 
 // =====================================================================================================
-
-
-//Find all Students-------------------------------------------------------
-student_route.route('/find').get((req, res) => {
-    Student.find((error, data) => {
-        if (error) {
-            return next(error)
-        } else {
-            res.json(data)
-        }
-    })
-})
-
-//Update a Student-------------------------------------------------------
-// student_route.route('/update/:id').get((req, res) => {
-//     Student.findByIdAndUpdate(req.params.id, (error, data) => {
-//         if (error) {
-//             return next(error)
-//         } else {
-//             res.json(data)
-//         }
-//     })
-// })
-
-
 
 module.exports = student_route; //exporting the route
 

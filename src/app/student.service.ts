@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { catchError, Observable, of, tap } from 'rxjs';
 import { Student } from './models/student.model';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 const API = 'http://localhost:3000/api';
 
@@ -12,10 +12,6 @@ export class StudentService {
   constructor(private http: HttpClient) {}
 
   private API = 'http://localhost:3000/api';
-  // private HTTP_HEADER = {
-  //   headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-  // };
- 
 
   //Get All Students--------------------------------------
   get_students(): Observable<Student[]> {
@@ -43,14 +39,9 @@ export class StudentService {
   }
 
   //Update Student --------------------------------------
-  update(id:any, data:any): Observable<any> {
-    return this.http.patch(`${API}/update/` + id, data)
+  update(id: any, data: any): Observable<any> {
+    return this.http.patch(`${API}/update/` + id, data);
   }
-  
-  // ==========================================================================================================
-  // update(id:any, data:any): Observable<any> {
-  //   return this.http.patch<Student>(`${API}/update`+id, this.HTTP_HEADER)
-  // }
-  
-}
 
+  // ==========================================================================================================
+}
