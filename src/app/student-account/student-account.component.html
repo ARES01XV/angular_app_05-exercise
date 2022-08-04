@@ -1,0 +1,59 @@
+<div class="container">
+  <a routerLink="/students">
+    <i class="fa-solid fa-circle-arrow-left"></i>
+    Back</a
+  >
+
+  <form action="">
+    <h2>Account Information</h2>
+    <div>
+      <label for="_id">ID</label><br />
+      <input type="number" id="_id" name="_id" />
+    </div>
+    <div>
+      <label for="acc_numb">Account Number</label><br />
+      <input
+        type="number"
+        id="acc_numb"
+        name="acc_numb"
+        [(ngModel)]="account.account_number"
+      />
+    </div>
+    <div>
+      <label for="bank">Bank</label><br />
+      <input type="text" id="bank" name="bank" [(ngModel)]="account.bank" />
+    </div>
+    <div>
+      <label for="branch">Branch</label><br />
+      <input
+        type="text"
+        id="branch"
+        name="branch"
+        [(ngModel)]="account.branch"
+      />
+    </div>
+    <div>
+      <label for="acc_type">Account Type</label><br />
+      <input
+        type="text"
+        id="acc_type"
+        name="acc_type"
+        [(ngModel)]="account.account_type"
+      />
+    </div>
+    <div>
+      <label for="status">Status</label><br />
+      <input
+        type="text"
+        id="status"
+        name="status"
+        [(ngModel)]="account.status"
+      />
+    </div>
+    <div>
+      <button (click)="add_account(account.student_id)">
+        Add/Update Account Info.
+      </button>
+    </div>
+  </form>
+</div>

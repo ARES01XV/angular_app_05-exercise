@@ -57,15 +57,21 @@ td {
   letter-spacing: 0.2vw;
 }
 
-.fa-file-pen{
-    color: #007bff;
-    padding: 0 .6vw;
+.fa-file-pen {
+  color: #007bff;
+  padding: 0 0.6vw;
 }
-.fa-trash-can{
-    color: #dc3545;
-    padding: 0 .6vw;
+.fa-trash-can {
+  color: #dc3545;
+  padding: 0 0.6vw;
+}
+.fa-file-invoice-dollar {
+  color: #35dc43;
+  padding: 0 0.6vw;
 }
 
-.fa-file-pen:hover, .fa-trash-can:hover{
+.fa-file-pen:hover,
+.fa-trash-can:hover,
+.fa-file-invoice-dollar:hover {
   cursor: pointer;
 }

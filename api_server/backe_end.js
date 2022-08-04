@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
-const student_route = require('./routes/student_route')
+const student_route = require('./routes/student_route');
+const account_route = require('./routes/account_route');
 
 
 //Mongoose Connections
@@ -24,6 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 app.use('/api', student_route);
+app.use('/api/account', account_route);
 
 //Port Setup
 const port = process.env.PORT || 3000;

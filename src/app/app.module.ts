@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StudentAddComponent } from './student-add/student-add.component';
 import { StudentEditComponent } from './student-edit/student-edit.component';
 import { FormsModule } from '@angular/forms';
+import { StudentAccountComponent } from './student-account/student-account.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     StudentAddComponent,
     StudentEditComponent,
+    StudentAccountComponent,
   ],
   imports: [
     BrowserModule,

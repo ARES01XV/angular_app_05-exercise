@@ -1,0 +1,84 @@
+.container {
+  /* border: 1px solid red; */
+  padding: 2vw;
+}
+
+.container > a {
+  /* border: 1px solid red; */
+  text-decoration: none;
+  color: #ebebeb;
+  padding: 1vw;
+  background: #787aed;
+  font-size: 1.3vw;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.container a:hover {
+  background: #4c4d98;
+}
+
+form {
+  /* border: 1px solid red; */
+  border-radius: 1vw;
+  width: 40vw;
+  margin: auto;
+  margin-top: 4vw;
+  padding: 2vw;
+  background: #ebebeb;
+  color: #4c594d;
+}
+
+form h2 {
+  font-size: 2vw;
+  text-align: center;
+  margin-bottom: 1vw;
+}
+
+form div {
+  /* border: 1px solid red; */
+  padding-bottom: 1vw;
+}
+
+form label {
+  font-size: 1.2vw;
+}
+form input {
+  border: none;
+  border-bottom: 0.2vw solid #787aed;
+  border-radius: 0;
+  width: 100%;
+  height: 2vw;
+  outline: none;
+  background: none;
+  padding: 0.5vw;
+  letter-spacing: 0.1vw;
+  caret-color: #dc3545;
+  font-size: 1.3vw;
+}
+
+form button {
+  border: none;
+  /* text-decoration: none; */
+  /* color: #ebebeb; */
+  padding: 1vw 2vw;
+  /* background: #787aed; */
+  background: #93ed78;
+  color: #323232;
+  font-size: 1.3vw;
+  font-weight: bold;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+form button:hover {
+  background: #6cae57;
+  cursor: pointer;
+}
+
+/* Account# */
+/* Bank */
+/* Branch */
+/* Account Type */
+/* Status */
+/* StudentID */
